@@ -3,13 +3,16 @@
 #### Em "application.properties" deve ser configurado o banco de dados, o banco usado foi o Postgre 9.4. A propria aplicação cria as tabelas.
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/nome-da-base
+
 spring.datasource.username=
+
 spring.datasource.password=
 
 #Metodos: 
 
 #### Cadastro "documento" e um campo Unique Key.
 localhost:8080/cadastrar
+
 {
 "nome" : String ,
 "documento" : number ,
@@ -21,6 +24,7 @@ localhost:8080/busca-cadastro?nome=&documento=&telefone=
 
 ####  Altera cadastro, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 localhost:8080/alterar-cadastro
+
 {
 "id" : number , 
 "nome" : String , 
@@ -33,6 +37,7 @@ localhost:8080/consulta?checkOut=
 
 ####  Realiza Check In, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 localhost:8080/check-in
+
 { 
 "hospede" : { "id" : number ,
 	      "nome" : String ,
@@ -46,6 +51,7 @@ localhost:8080/check-in
 
 ####  Realiza Check Out, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 localhost:8080/check-out
+
 { 
 "hospede" : { "id" : number ,
 	      "nome" : String ,
