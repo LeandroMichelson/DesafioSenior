@@ -48,10 +48,16 @@ public class ConHospedagem {
 
 		// Verifica se existe a hospegadem e se já não foi feito check-out
 		if (hospedagem != null && !hospedagem.getCheckOut()) {
-			hospedagem.setHospede(hospedeBanco);
+
 			hospedagem.setCheckOut(true);
 			hospedagem.setValor(calcularValorHospedagem(hospedagem.getDataEntrada(), hospedagem.getDataSaida(),
 					hospedagem.getAdicionalVeiculo(), hospedagem.getCheckOut()));
+
+			hospedeBanco.setUltimoValorGasto(hospedagem.getValor());
+			hospedeBanco.setTotalGasto(hospedeBanco.getTotalGasto() + hospedagem.getValor());
+			hospedeBanco = repHospede.save(hospedeBanco);
+
+			hospedagem.setHospede(hospedeBanco);
 
 			return repHospedagem.save(hospedagem);
 		}
