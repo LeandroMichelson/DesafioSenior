@@ -1,14 +1,14 @@
 # DesafioSenior
 
-Em "application.properties" deve ser configurado o banco de dados, o banco usado foi o Postgre 9.4. A prÃ³prio aplicaÃ§Ã£o cria as tabelas.
+#### Em "application.properties" deve ser configurado o banco de dados, o banco usado foi o Postgre 9.4. A propria aplicação cria as tabelas.
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/nome-da-base
 spring.datasource.username=
 spring.datasource.password=
 
-Metodos: 
+#Metodos: 
 
-Cadastro "documento" e um campo Unique Key.
+#### Cadastro "documento" e um campo Unique Key.
 localhost:8080/cadastrar
 {
 "nome" : String ,
@@ -16,10 +16,10 @@ localhost:8080/cadastrar
 "telefone" : number
 }
 
-Busca o hospede pelo nome"String", documento"number" e telefone"number", somente 1 precisa estar com valor.
+####  Busca o hospede pelo nome"String", documento"number" e telefone"number", somente 1 precisa estar com valor.
 localhost:8080/busca-cadastro?nome=&documento=&telefone=
 
-Altera cadastro, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
+####  Altera cadastro, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 localhost:8080/alterar-cadastro
 {
 "id" : number , 
@@ -28,10 +28,10 @@ localhost:8080/alterar-cadastro
 "telefone" : number 
 }
 
-Busca hospede que ainda estão hospedados"checkOut=false" e os que já sairam"checkOut=true"
+####  Busca hospede que ainda estão hospedados"checkOut=false" e os que já sairam"checkOut=true"
 localhost:8080/consulta?checkOut=
 
-Realiza Check In, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
+####  Realiza Check In, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 localhost:8080/check-in
 { 
 "hospede" : { "id" : number ,
@@ -44,7 +44,7 @@ localhost:8080/check-in
 "adicionalVeiculo" : true/false
 }
 
-Realiza Check Out, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
+####  Realiza Check Out, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 localhost:8080/check-out
 { 
 "hospede" : { "id" : number ,
