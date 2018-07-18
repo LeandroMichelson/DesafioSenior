@@ -10,8 +10,8 @@ spring.datasource.password=
 
 ### Metodos: 
 
-#### Cadastro "documento" e um campo Unique Key.
 ## localhost:8080/cadastrar
+#### Cadastro "documento" e um campo Unique Key.
 {
 
 "nome" : String ,
@@ -22,11 +22,11 @@ spring.datasource.password=
 
 }
 
+## localhost:8080/busca-cadastro?nome=&documento=&telefone=
 ####  Busca o hospede pelo nome"String", documento"number" e telefone"number", somente 1 precisa estar com valor.
-localhost:8080/busca-cadastro?nome=&documento=&telefone=
 
-####  Altera cadastro, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 ## localhost:8080/alterar-cadastro
+####  Altera cadastro, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 {
 
 "id" : number , 
@@ -39,11 +39,11 @@ localhost:8080/busca-cadastro?nome=&documento=&telefone=
 
 }
 
-####  Busca hospede que ainda estão hospedados"checkOut=false" e os que já sairam"checkOut=true"
 ## localhost:8080/consulta?checkOut=
+####  Busca hospede que ainda estão hospedados"checkOut=false" e os que já sairam"checkOut=true"
 
-####  Realiza Check In, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 ## localhost:8080/check-in
+####  Realiza Check In, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 { 
 
 "hospede" : { 
@@ -63,8 +63,8 @@ localhost:8080/busca-cadastro?nome=&documento=&telefone=
 
 }
 
-####  Realiza Check Out, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 ## localhost:8080/check-out
+####  Realiza Check Out, obrigatorio informar o id. Usar o "/busca-cadastro" antes para saber o valor do mesmo.
 { 
 
 "hospede" : {
